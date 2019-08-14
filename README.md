@@ -6,6 +6,7 @@ function FindProxyForURL(url, host) { return 'PROXY localhost:8888; DIRECT'; }
 $ curl http://macbook-pro.local:8000/
 function FindProxyForURL(url, host) { return 'PROXY macbook-pro.local:8888; DIRECT'; }
 ```
+It's a Ruby WEBrick server. The reason it's wrapped in an Automator app is to provide a quick-and-dirty menu bar icon for indication and quitting.
 
 ## Installation
 The app is unsigned, which will cause Gatekeeper to reject it. Before first run, you must open the app with Automator.app and save it. This will cause it to be accepted by the system.  
