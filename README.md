@@ -11,6 +11,13 @@ unzip master.zip
 open -a Automator.app "self-pac-master/Self PAC.app"
 ```
 
+Launch the app and test it's working by:
+```
+curl http://localhost:8000/
+# should print:
+# function FindProxyForURL(url, host) { return 'PROXY localhost:8888; DIRECT'; }
+```
+
 ## Core files
 * [run_server.rb](Self%20PAC.app/Contents/Scripts/run_server.rb) - the actual WEBrick server
 * [document.wflow](Self%20PAC.app/Contents/document.wflow) - the automator workflow
