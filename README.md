@@ -1,8 +1,14 @@
 # Self PAC
 Small Automator app that runs an echo PAC configuration server that returns its own hostname.
+```
+$ curl http://localhost:8000/
+function FindProxyForURL(url, host) { return 'PROXY localhost:8888; DIRECT'; }
+$ curl http://macbook-pro.local:8000/
+function FindProxyForURL(url, host) { return 'PROXY macbook-pro.local:8888; DIRECT'; }
+```
 
 ## Installation
-The app is unsigned, which will cause Gatekeeper to reject it. Before first run, you must open the app with Automator.app and save it.
+The app is unsigned, which will cause Gatekeeper to reject it. Before first run, you must open the app with Automator.app and save it. This will cause it to be accepted by the system.  
 Script:
 
 ```
